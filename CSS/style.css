@@ -904,10 +904,16 @@ ol, ul {
 
 /* 1st */
 .blue-dash-grid {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 1em 1fr 1em 1fr 1em 1fr;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1em;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -915,6 +921,8 @@ ol, ul {
     border: 1px dashed rgba(123, 40, 217, 0.583);
     border-radius: 10px;
     padding: 30px 1px;
+    -webkit-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
     cursor: pointer;
     border: 1px dashed rgba(126, 41, 218, 1);
@@ -968,6 +976,7 @@ ol, ul {
     border: 1px dashed rgba(124, 40, 217, 1) !important;
     border-radius: 6px;
     background-color: rgba(251, 248, 253, 1) !important;
+    -webkit-box-shadow: none;
     box-shadow: none;
     margin-bottom: 20px;
     font-family: 'NotoSerif__Regular';
@@ -975,6 +984,7 @@ ol, ul {
 
 .wid-div .form-control:focus {
     background-color: #ffffff !important;
+    -webkit-box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px !important;
     box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px !important;
     border: 1px solid rgba(124, 40, 217, 1) !important;
 }
@@ -986,7 +996,9 @@ ol, ul {
 }
 
 .select-text-div {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
 }
 
@@ -1030,18 +1042,21 @@ ol, ul {
     left: 5px;
     border-radius: 100%;
     -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
 
 [type="radio"]:not(:checked)+label:after {
     opacity: 0;
     -webkit-transform: scale(0);
+    -ms-transform: scale(0);
     transform: scale(0);
 }
 
 [type="radio"]:checked+label:after {
     opacity: 1;
     -webkit-transform: scale(1);
+    -ms-transform: scale(1);
     transform: scale(1);
 }
 
@@ -1059,7 +1074,9 @@ ol, ul {
     border: 1.8px dashed rgba(124, 40, 217, 1);
     background-color: rgba(149, 225, 159, 0.361);
     background: rgba(124, 40, 217, 1);
+    background: -o-linear-gradient(359.25deg, #7C28D9 3.62%, #DA42F0 99.63%);
     background: linear-gradient(90.75deg, #7C28D9 3.62%, #DA42F0 99.63%);
+    -webkit-box-shadow: 0px 8px 18px rgb(189 99 255 / 24%);
     box-shadow: 0px 8px 18px rgb(189 99 255 / 24%);
     border-radius: 8px;
     -webkit-transition: 0.2s;
@@ -1111,8 +1128,14 @@ ol, ul {
 
 
 .div-no {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     width: 100%;
 }
@@ -1122,8 +1145,14 @@ ol, ul {
 }
 
 .div-no {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     width: 100%;
 }
@@ -1136,6 +1165,7 @@ ol, ul {
     border: 1px dashed rgba(124, 40, 217, 1) !important;
     border-radius: 6px;
     background-color: rgba(251, 248, 253, 1) !important;
+    -webkit-box-shadow: none;
     box-shadow: none;
     margin-bottom: 20px;
     font-family: 'NotoSerif__Regular';
@@ -1143,6 +1173,7 @@ ol, ul {
 
 .div-no .form-control:focus {
     background-color: #ffffff !important;
+    -webkit-box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px !important;
     box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px !important;
     border: 1px solid rgba(124, 40, 217, 1) !important;
 }
@@ -1154,7 +1185,9 @@ ol, ul {
 }
 
 .div-video-vid {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 2em 1fr 2em 1fr;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2em;
 }
@@ -1169,6 +1202,8 @@ ol, ul {
 
 
 .dib {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -1180,6 +1215,8 @@ ol, ul {
 .blue-dash-grid button {
     border: none;
     background-color: transparent;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     vertical-align: middle;
 }
@@ -1187,6 +1224,7 @@ ol, ul {
 
 @media screen and (max-width: 992px) {
     .blue-dash-grid {
+        -ms-grid-columns: 1fr 1em 1fr;
         grid-template-columns: repeat(2, 1fr);
 
     }
@@ -1203,10 +1241,12 @@ ol, ul {
 @media screen and (max-width: 640px) {
 
     .div-video-vid {
+        -ms-grid-columns: 1fr;
         grid-template-columns: repeat(1, 1fr);
     }
 
     .blue-dash-grid {
+        -ms-grid-columns: 1fr;
         grid-template-columns: repeat(1, 1fr);
 
     }
